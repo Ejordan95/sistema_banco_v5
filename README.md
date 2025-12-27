@@ -1,19 +1,20 @@
-# Sistema Bancário V4
+# Sistema Bancário V5
 
 Projeto do Curso Python da DIO
 
 Novas funções:
-* Decorador de log:
-    * Implementar um decorador que seja aplicado a todas as funções de transações (depósito, saque, criação de conta, etc);
-    * Esse decorado deve registrar data e hora de cada transação;
-* Gerador de Relatórios
-    * Permitir iterar sobre as transações de uma conta e retornar uma a uma as transações realizados;
-    * Ter uma forma de filtrar as transações baseado no tipo (apenas deposito ou saques).
-* Iterador personalizado
-    * Implementar um iterador personalizado que permita iterar sobre todas as contas do banco retornando informações básicas de cada conta (número, saldo atual, etc).
-* Estabelecer um limite de 10 transações diárias para uma conta;
-* Se o usuário tentar fazer uma transação após atingir o limite, deve ser informado que ele execeu o número de transações permitidas para aquele dia;
----
+* Modificar o atual decorador de log que imprime informações no console, para que salve as informações em um arquivo de log.
+    * Requisitos:
+        * Data e hora atuais;
+        * Nome da função;
+        * Argumentos da função;
+        * Valor Retornado pela função;
+        * O arquivo log deve se chamar log.txt;
+        * Se o arquivo log.txt já existir, os novos logs devem ser adicionados no final do arquivo;
+        * Cada entrada de log deve estar em uma nova linha.
+
+
+
 ## Regras de cada função
 ### Depósito
 * Todos os depósitos devem ser registrados em uma váriavel;
@@ -57,6 +58,16 @@ Novas funções:
     * Agência;
     * Número da conta;
     * Nome do titular.
+
+### Decorador de log:
+ * Esse decorador deve registra data e hora de cada transação (depósito, saque, criação de conta, etc);
+### Gerador de Relatórios
+* Permitir iterar sobre as transações de uma conta e retornar uma a uma as transações realizados;
+* Ter uma forma de filtrar as transações baseado no tipo (apenas deposito ou saques).
+### Iterador personalizado
+* Implementar um iterador personalizado que permita iterar sobre todas as contas do banco retornando informações básicas de cada conta (número, saldo atual, etc).
+* Estabelecer um limite de 10 transações diárias para uma conta;
+* Se o usuário tentar fazer uma transação após atingir o limite, deve ser informado que ele execeu o número de transações permitidas para aquele dia;
 
 ### Observações
 * É possível um usuário ter mais de uma conta, porém no momento das transações não é possível especificar a conta.
